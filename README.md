@@ -1,12 +1,8 @@
 # Attendance System (Face Recognition)
 
-<div>
 <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse3.mm.bing.net%2Fth%3Fid%3DOIP.w8cgJkXfLSuZKmIf4UvjnQHaEQ%26pid%3DApi&f=1&ipt=8f4b6d9545b0c482d8a9239910ccd7e902cf161cca416f3b6d202cfde55b5063&ipo=images" alt="Face Recognition" align="center" loading="lazy">
-</div>
 
-
-## Description
-The Python script implements an **Attendance System** using facial recognition. It captures video from a webcam, detects faces in the video feed, matches them against a list of known faces, and logs the attendance of recognized individuals in a CSV file.
+<hr>
 
 <div>
 
@@ -22,7 +18,7 @@ The Python script implements an **Attendance System** using facial recognition. 
    - The camera is initialized using OpenCV (`cv2.VideoCapture(camera)`), where the default camera is set to `0`. If an external camera is used, you can change this value.
 
 ### 3. **Loading and Encoding Known Faces:**
-   - Several face images (e.g., Muzamil, Surjith, Ramprasath, etc.) are loaded using `face_recognition.load_image_file()`.
+   - Several face images (e.g., A, Surjith, Ramprasath, etc.) are loaded using `face_recognition.load_image_file()`.
    - The faces are encoded using `face_recognition.face_encodings()` and stored in a list `known_face_encoding` for later comparison.
 
 ### 4. **Known Names:**
@@ -52,11 +48,15 @@ The Python script implements an **Attendance System** using facial recognition. 
 - **Attendance Logging**: Logs the name and the time of appearance in a CSV file.
 - **Efficient Face Detection**: Uses downscaled frames to improve performance without compromising recognition accuracy.
 
-This script is ideal for implementing a real-time attendance system using facial recognition.
 
 <hr>
 
-### Tools:
+## Note:
+Use the [Python 3.10.x](https://www.python.org/downloads/release/python-31011/) Version (`Recommended`)
+
+<hr>
+
+## Tools:
 <div>
 
 |  Tools  | Version | Check |
