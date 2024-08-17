@@ -1,0 +1,163 @@
+##  Import the required modules here!
+
+import face_recognition
+import cv2
+import numpy as np
+import csv
+from datetime import datetime
+
+## Initializing the Camera
+video_capture = cv2.VideoCapture(1)
+
+## name for unknow person
+unknown_name = ""  
+
+## Loading the image files in `namee_image` variable 
+## and storing the encoded image files in the `name_encoding` variable. 
+tamil_image = face_recognition.load_image_file("photos/tamil.jpg")
+tamil_encoding = face_recognition.face_encodings(tamil_image)[0]
+
+muzamil_image = face_recognition.load_image_file("photos/muzamil.jpg")
+muzamil_encoding = face_recognition.face_encodings(muzamil_image)[0]
+
+surjith_image = face_recognition.load_image_file("photos/surjith.jpg")
+surjith_encoding = face_recognition.face_encodings(surjith_image)[0]
+
+ram_image = face_recognition.load_image_file("photos/ramp.jpg")
+ram_encoding = face_recognition.face_encodings(ram_image)[0]
+
+naveen_image = face_recognition.load_image_file("photos/naveen.jpg")
+naveen_encoding = face_recognition.face_encodings(naveen_image)[0]
+
+vasanth_image = face_recognition.load_image_file("photos/vasanth.jpg")
+vasanth_encoding = face_recognition.face_encodings(vasanth_image)[0]
+
+srini_image = face_recognition.load_image_file("photos/srini.jpg")
+srini_encoding = face_recognition.face_encodings(srini_image)[0]
+
+##  Add the encoded image variable in the `known_face_encoding` list.
+known_face_encoding = [
+    tamil_encoding,
+    muzamil_encoding,
+    surjith_encoding,
+    ram_encoding,
+    naveen_encoding,0-                                                                                          
+    vasanth_encoding,
+    srini_encoding
+]
+
+##  Loding the known faces names
+known_faces_names = [
+    "Tamil",
+    "Muzamil",
+    "Surjith", "Ramprasath", "Naveen", 
+    "Vasanth", "Srinikethen"
+]
+
+unknown_faces_names = []
+
+##  Copying the know person faces to check their faces in the loop to detect their appearance.
+students = known_faces_names.copy()
+
+face_locations = []
+face_encodings = []
+face_names = []
+s = True
+
+## Set current date and time using `datetime` module.
+now = datetime.now()
+current_date = now.strftime("%Y-%m-%d")
+
+##  If we use `w+` mode, it rewrites the data of the attandance so some of the data might be lost.
+##  So we are using `a+` mode to update the file each and every time it gets executed.
+##  the `date.csv` file would be saved in the `data` fonder.
+f = open("data/" + current_date + ".csv", "a", newline="")
+
+##  Writing the person `Name` and `Time Appeared` data in the csv file.  
+lnwriter = csv.writer(f)
+
+##  Begining of the Loop
+while True:
+    ## `_` refers the index of the video_capture
+    ## `frame` refers the API Preference of the video_capture
+    _, frame = video_capture.read()
+    ## Set the frame size
+    small_frame = cv2.resize(frame, (0, 0), fx=0.25, fy=0.25)
+
+    # if your system takes the reverse of rgb encoding use this 
+    # rgb_small_frame = small_frame[:, :, :: -1]
+    rgb_small_frame = small_frame[ :, :, :: 1 ]  
+
+    # recognize the face and their encodings
+    if s:
+        face_locations = face_recognition.face_locations(rgb_small_frame)
+        face_encodings = face_recognition.face_encodings(
+            rgb_small_frame, face_locations
+        )
+        face_names = []
+        for face_encoding in face_encodings:
+            matches = face_recognition.compare_faces(known_face_encoding, face_encoding)
+            name = ""
+            face_distance = face_recognition.face_distance(
+                known_face_encoding, face_encoding
+            )
+            best_match_index = np.argmin(face_distance)
+            if matches[best_match_index]:
+                name = known_faces_names[best_match_index]
+
+            face_names.append(name)
+            ## if name and face matches 
+            ## do this 
+            if name in known_faces_names:
+                font = cv2.FONT_ITALIC
+                bottomLeftCornerOfText = (10, 100)
+                fontScale = 1.5
+                fontColor = (4, 224, 107)
+                thickness = 3
+                lineType = 2
+
+                cv2.putText(
+                    frame,
+                    name + " Present",
+                    bottomLeftCornerOfText,
+                    font,
+                    fontScale,
+                    fontColor,
+                    thickness,
+                    lineType,
+                )
+
+                if name in students:
+                    students.remove(name)
+                    print(students)
+                    current_time = now.strftime("%H-%M-%S")
+                    lnwriter.writerow([name, current_time])
+
+            ## if name not present in the List
+            ## do this 
+            elif name not in known_faces_names:
+                font = cv2.FONT_HERSHEY_SIMPLEX
+                bottomLeftCornerOfText = (10, 100)
+                fontScale = 1.5
+                fontColor = (252, 3, 3)
+                thickness = 3
+                lineType = 2
+
+                cv2.putText(
+                    frame,
+                    unknown_name + "Unknown Person",
+                    bottomLeftCornerOfText,
+                    font,
+                    fontScale,
+                    fontColor,
+                    thickness,
+                    lineType,
+                )
+                
+    cv2.imshow("Attendence System", frame)
+    if cv2.waitKey(1) & 0xFF == ord("q"):  ## press q to exit.
+        break  ## destroy the process
+
+video_capture.release()  ## stop the video capture
+cv2.destroyAllWindows()  ## destroy the cv2 frame 
+f.close()  ## csv file close.
