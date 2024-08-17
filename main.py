@@ -23,31 +23,31 @@ unknown_name = ""
 # Loading the image files in `name_image` variable
 # and storing the encoded image files in the `name_encoding` variable.
 tamil_image = face_recognition.load_image_file("photos/tamil.jpg")
-# tamil_image = cv2.cvtColor(tamil_image, cv2.COLOR_BGR2RGB)
+tamil_image = cv2.cvtColor(tamil_image, cv2.COLOR_BGR2RGB)
 tamil_encoding = face_recognition.face_encodings(tamil_image)[0]
 
 muzamil_image = face_recognition.load_image_file("photos/muzamil.jpg")
-# muzamil_image = cv2.cvtColor(muzamil_image, cv2.COLOR_BGR2RGB)
+muzamil_image = cv2.cvtColor(muzamil_image, cv2.COLOR_BGR2RGB)
 muzamil_encoding = face_recognition.face_encodings(muzamil_image)[0]
 
 surjith_image = face_recognition.load_image_file("photos/surjith.jpg")
-# surjith_image = cv2.cvtColor(surjith_image, cv2.COLOR_BGR2RGB)
+surjith_image = cv2.cvtColor(surjith_image, cv2.COLOR_BGR2RGB)
 surjith_encoding = face_recognition.face_encodings(surjith_image)[0]
 
 ram_image = face_recognition.load_image_file("photos/ramp.jpg")
-# ram_image = cv2.cvtColor(ram_image, cv2.COLOR_BGR2RGB)
+ram_image = cv2.cvtColor(ram_image, cv2.COLOR_BGR2RGB)
 ram_encoding = face_recognition.face_encodings(ram_image)[0]
 
 naveen_image = face_recognition.load_image_file("photos/naveen.jpg")
-# naveen_image = cv2.cvtColor(naveen_image, cv2.COLOR_BGR2RGB)
+naveen_image = cv2.cvtColor(naveen_image, cv2.COLOR_BGR2RGB)
 naveen_encoding = face_recognition.face_encodings(naveen_image)[0]
 
 vasanth_image = face_recognition.load_image_file("photos/vasanth.jpg")
-# vasanth_image = cv2.cvtColor(vasanth_image, cv2.COLOR_BGR2RGB)
+vasanth_image = cv2.cvtColor(vasanth_image, cv2.COLOR_BGR2RGB)
 vasanth_encoding = face_recognition.face_encodings(vasanth_image)[0]
 
 srini_image = face_recognition.load_image_file("photos/srini.jpg")
-# srini_image = cv2.cvtColor(srini_image, cv2.COLOR_BGR2RGB)
+srini_image = cv2.cvtColor(srini_image, cv2.COLOR_BGR2RGB)
 srini_encoding = face_recognition.face_encodings(srini_image)[0]
 
 #  Add the encoded image variable in the `known_face_encoding` list.
