@@ -1,9 +1,0 @@
-{
-    "editor.fontFamily": "JetBrains Mono, Consolas, 'Courier New', monospace",
-    "editor.fontSize": 16,
-    "files.autoSaveDelay": 900,
-    "files.autoSave": "afterDelay",
-    "editor.fontLigatures": true,
-    "workbench.colorTheme": "Tokyo Night",
-    "python.pipenvPath": "C:\\Users\\littl\\AppData\\Local\\Programs\\Python\\Python39\\python.exe"
-}
