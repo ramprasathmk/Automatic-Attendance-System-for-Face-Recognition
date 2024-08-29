@@ -2,7 +2,6 @@
 
 <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse3.mm.bing.net%2Fth%3Fid%3DOIP.w8cgJkXfLSuZKmIf4UvjnQHaEQ%26pid%3DApi&f=1&ipt=8f4b6d9545b0c482d8a9239910ccd7e902cf161cca416f3b6d202cfde55b5063&ipo=images" alt="Face Recognition" align="center" loading="lazy">
 
-<hr>
 
 <div>
 
@@ -49,12 +48,9 @@
 - **Efficient Face Detection**: Uses downscaled frames to improve performance without compromising recognition accuracy.
 
 
-<hr>
-
 ## Note:
 Use the [Python 3.10.x](https://www.python.org/downloads/release/python-31011/) Version (`Recommended`)
 
-<hr>
 
 ## Tools:
 <div>
