@@ -91,22 +91,22 @@ Collecting face-recognition
 ```bash
 face_recog_dlib_file> pip list
 ```
-|Package                 | Version  |
-|----------------------- | ---------|
-|aiohttp                 | 3.8.4    |
-|aiosignal               | 1.3.1    |
-|async-timeout           | 4.0.2    |
-|click                   | 8.1.7    |
-|cmake                   | 3.30.2   |
-|colorama                | 0.4.6    |
-|dlib                    | 19.22.99 |
-|face-recognition        | 1.3.0    |
-|face-recognition-models | 0.3.0    |
-|frozenlist              | 1.3.3    |
-|multidict               | 6.0.4    |
-|numpy                   | 2.0.1    |
-|openai                  | 0.27.4   |
-|pillow                  | 10.4.0   |
-|pip                     | 23.0.1   |
-|setuptools              | 65.5.0   |
-|yarl                    | 1.9.1    |
+| Package                 | Version  |
+|-------------------------|----------|
+| aiohttp                 | 3.8.4    |
+| aiosignal               | 1.3.1    |
+| async-timeout           | 4.0.2    |
+| click                   | 8.1.7    |
+| cmake                   | 3.30.2   |
+| colorama                | 0.4.6    |
+| dlib                    | 19.22.99 |
+| face-recognition        | 1.3.0    |
+| face-recognition-models | 0.3.0    |
+| frozenlist              | 1.3.3    |
+| multidict               | 6.0.4    |
+| numpy                   | 2.0.1    |
+| openai                  | 0.27.4   |
+| pillow                  | 10.4.0   |
+| pip                     | 23.0.1   |
+| setuptools              | 65.5.0   |
+| yarl                    | 1.9.1    |
