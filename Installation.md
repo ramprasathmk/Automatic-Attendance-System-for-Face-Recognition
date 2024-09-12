@@ -1,3 +1,14 @@
+# Installation and Setup Procedures
+
+
+### Step 1:
+- Open `Run Command` or Press **Windows Logo** + **R** key to open the `Run Command`.
+- Then type `cmd` and Press **Ctrl** + **Shift** + **Enter**.
+- After that run the following commands.
+
+
+### Step 2:
+
 ```bash
 > git clone "https://github.com/RvTechiNNovate/face_recog_dlib_file.git"
 ```
