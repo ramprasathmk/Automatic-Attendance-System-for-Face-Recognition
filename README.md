@@ -57,14 +57,15 @@
 
 
 ## Note:
-- Use the [Python 3.10][pyn] **(`Recommended`)** series.
+- Use the [Python 3.10][pyn] version.
+- **Recommended Python Series** for the Execution.
 
 
 ## Tools:
 
-|  Tools  | Version | Check |
-|---------|---------|-------|
-| Python  | [3.10][pyn] |  [✔]  |
-| Pip     | [latest][pip]  |  [✔]  |
-| VSCode  | [latest][vsc]  |  [✔]  |
-| PyCharm | [latest][pyc]  |  [✔]  |
+| Tools   | Version       | Check |
+|---------|---------------|-------|
+| Python  | [3.10][pyn]   | [✔]   |
+| Pip     | [latest][pip] | [✔]   |
+| VSCode  | [latest][vsc] | [✔]   |
+| PyCharm | [latest][pyc] | [✔]   |
