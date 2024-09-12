@@ -2,8 +2,9 @@
 
 
 ### Step 1:
-- Open `Run Command` or Press **Windows Logo** + **R** key to open the `Run Command`.
+- Open **Run Command** or Press **Windows Logo** + **R** key to open the `Run Command`.
 - Then type `cmd` and Press **Ctrl** + **Shift** + **Enter**.
+- Click the **Yes** button of the **User Account Control** window.
 - After that run the following commands.
 
 

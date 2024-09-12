@@ -45,10 +45,16 @@
 - **Efficient Face Detection**: Uses downscaled frames to improve performance without compromising recognition accuracy.
 
 
+[ins]: ./Installation.md
 [pyn]: https://www.python.org/downloads/release/python-31011/
 [pip]: https://pypi.org/project/pip/
 [vsc]: https://code.visualstudio.com/download/
 [pyc]: https://www.jetbrains.com/pycharm/download/
+
+
+## For Installation Process:
+- Refer the [Installation.md][ins] file.
+
 
 ## Note:
 - Use the [Python 3.10][pyn] **(`Recommended`)** series.
