@@ -88,81 +88,87 @@ with open(f"data/{current_date}.csv", "a", newline="") as f:
     lnwriter = csv.writer(f)
 
     #  Beginning of the Loop
-    while True:
-        # `_` refers the index of the video_capture
-        # `frame` refers the API Preference of the video_capture
-        _, frame = video_capture.read()
-        # Set the frame size
-        small_frame = cv2.resize(frame, (0, 0), fx=0.25, fy=0.25)
+    try:
+        while True:
+            # `_` refers the index of the video_capture
+            # `frame` refers the API Preference of the video_capture
+            _, frame = video_capture.read()
+            # Set the frame size
+            small_frame = cv2.resize(frame, (0, 0), fx=0.25, fy=0.25)
 
-        # if your system takes the reverse of rgb encoding use this 
-        # rgb_small_frame = small_frame[:, :, :: -1] ## Default Value
-        # rgb_small_frame = small_frame[:, :, :: 1] ## My Value
-        rgb_small_frame = cv2.cvtColor(small_frame, cv2.COLOR_BGR2RGB)
+            # if your system takes the reverse of rgb encoding use this
+            # rgb_small_frame = small_frame[:, :, :: -1] ## Default Value
+            # rgb_small_frame = small_frame[:, :, :: 1] ## My Value
+            rgb_small_frame = cv2.cvtColor(small_frame, cv2.COLOR_BGR2RGB)
 
-        # recognize the face and their encodings
-        if recognize:
-            face_locations = face_recognition.face_locations(rgb_small_frame)
-            face_encodings = face_recognition.face_encodings(
-                rgb_small_frame, face_locations
-            )
-            face_names = []
-            fontScale = 1.5
-            thickness = 3
-            lineType = 2
-
-            for face_encoding in face_encodings:
-                matches = face_recognition.compare_faces(known_face_encoding, face_encoding)
-                name = ""
-                face_distance = face_recognition.face_distance(
-                    known_face_encoding, face_encoding
+            # recognize the face and their encodings
+            if recognize:
+                face_locations = face_recognition.face_locations(rgb_small_frame)
+                face_encodings = face_recognition.face_encodings(
+                    rgb_small_frame, face_locations
                 )
-                best_match_index = np.argmin(face_distance)
-                if matches[best_match_index]:
-                    name = known_faces[best_match_index]
+                face_names = []
+                fontScale = 1.5
+                thickness = 3
+                lineType = 2
 
-                face_names.append(name)
-                bottomLeftCornerOfText = (10, 100)
-                # if name and face matches
-                # do this
-                if name in known_faces:
-                    font = cv2.FONT_ITALIC
-                    fontColor = (4, 224, 107)
-                    cv2.putText(
-                        frame,
-                        f"{name} Present",
-                        bottomLeftCornerOfText,
-                        font,
-                        fontScale,
-                        fontColor,
-                        thickness,
-                        lineType,
+                for face_encoding in face_encodings:
+                    matches = face_recognition.compare_faces(known_face_encoding, face_encoding)
+                    name = ""
+                    face_distance = face_recognition.face_distance(
+                        known_face_encoding, face_encoding
                     )
+                    best_match_index = np.argmin(face_distance)
+                    if matches[best_match_index]:
+                        name = known_faces[best_match_index]
 
-                    if name in students:
-                        students.remove(name)
-                        print(students)
-                        current_time = now.strftime("%H-%M-%S")
-                        lnwriter.writerow([name, current_time])
+                    face_names.append(name)
+                    bottomLeftCornerOfText = (10, 100)
+                    # if name and face matches
+                    # do this
+                    if name in known_faces:
+                        font = cv2.FONT_ITALIC
+                        fontColor = (4, 224, 107)
+                        cv2.putText(
+                            frame,
+                            f"{name} Present",
+                            bottomLeftCornerOfText,
+                            font,
+                            fontScale,
+                            fontColor,
+                            thickness,
+                            lineType,
+                        )
 
-                else:
-                    font = cv2.FONT_HERSHEY_SIMPLEX
-                    fontColor = (252, 3, 3)
-                    cv2.putText(
-                        frame,
-                        f"{unknown_name}Unknown Person",
-                        bottomLeftCornerOfText,
-                        font,
-                        fontScale,
-                        fontColor,
-                        thickness,
-                        lineType,
-                    )
+                        if name in students:
+                            students.remove(name)
+                            print(students)
+                            current_time = now.strftime("%H-%M-%S")
+                            lnwriter.writerow([name, current_time])
 
-        cv2.imshow("Attendance System", frame)
-        # ord("q") = 113
-        if cv2.waitKey(1) & 0xFF == ord("q"):  # press q to exit.
-            break  # destroy the process
+                    else:
+                        font = cv2.FONT_HERSHEY_SIMPLEX
+                        fontColor = (252, 3, 3)
+                        cv2.putText(
+                            frame,
+                            f"{unknown_name}Unknown Person",
+                            bottomLeftCornerOfText,
+                            font,
+                            fontScale,
+                            fontColor,
+                            thickness,
+                            lineType,
+                        )
+
+            cv2.imshow("Attendance System", frame)
+            # ord("q") = 113
+            if cv2.waitKey(1) & 0xFF == ord("q"):  # press q to exit.
+                break  # destroy the process
+
+    except KeyboardInterrupt as kie:
+        print(kie)
+    finally:
+        print("Process Finished Successfully")
 
     video_capture.release()  # stop the video capture
     cv2.destroyAllWindows()  # destroy the cv2 frame
