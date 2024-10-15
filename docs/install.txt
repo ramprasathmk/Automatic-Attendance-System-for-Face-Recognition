@@ -1,0 +1,164 @@
+werShell 7.4.5
+D:\GitHub\ramprasathmk\Automatic-Attendance-System-for-Face-Recognition git:[master]
+pip show pipenv
+WARNING: Package(s) not found: pipenv
+D:\GitHub\ramprasathmk\Automatic-Attendance-System-for-Face-Recognition git:[master]
+pip install pipenv
+Collecting pipenv
+  Downloading pipenv-2024.1.0-py3-none-any.whl.metadata (19 kB)
+Requirement already satisfied: certifi in c:\users\littl\appdata\roaming\python\python312\site-packages (from pipenv) (2024.7.4)
+Requirement already satisfied: packaging>=22 in c:\users\littl\appdata\roaming\python\python312\site-packages (from pipenv) (24.1)
+Requirement already satisfied: setuptools>=67 in c:\users\littl\appdata\roaming\python\python312\site-packages (from pipenv) (72.2.0)
+Requirement already satisfied: virtualenv>=20.24.2 in c:\users\littl\appdata\roaming\python\python312\site-packages (from pipenv) (20.26.3)
+Requirement already satisfied: distlib<1,>=0.3.7 in c:\users\littl\appdata\roaming\python\python312\site-packages (from virtualenv>=20.24.2->pipenv) (0.3.8)
+Requirement already satisfied: filelock<4,>=3.12.2 in c:\users\littl\appdata\roaming\python\python312\site-packages (from virtualenv>=20.24.2->pipenv) (3.15.4)
+Requirement already satisfied: platformdirs<5,>=3.9.1 in c:\users\littl\appdata\roaming\python\python312\site-packages (from virtualenv>=20.24.2->pipenv) (4.2.2)
+Downloading pipenv-2024.1.0-py3-none-any.whl (3.0 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.0/3.0 MB 10.5 MB/s eta 0:00:00
+Installing collected packages: pipenv
+Successfully installed pipenv-2024.1.0
+D:\GitHub\ramprasathmk\Automatic-Attendance-System-for-Face-Recognition git:[master]
+pipenv --version
+pipenv, version 2024.1.0
+D:\GitHub\ramprasathmk\Automatic-Attendance-System-for-Face-Recognition git:[master]
+pipenv requirements
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "C:\Python312\Scripts\pipenv.exe\__main__.py", line 7, in <module>
+    # when invoked as python -m pip <command>
+                 ^^^^^
+  File "C:\Python312\Lib\site-packages\pipenv\vendor\click\core.py", line 1157, in __call__
+    return self.main(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python312\Lib\site-packages\pipenv\cli\options.py", line 52, in main
+    return super().main(*args, **kwargs, windows_expand_args=False)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python312\Lib\site-packages\pipenv\vendor\click\core.py", line 1078, in main
+    rv = self.invoke(ctx)
+         ^^^^^^^^^^^^^^^^
+  File "C:\Python312\Lib\site-packages\pipenv\vendor\click\core.py", line 1688, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python312\Lib\site-packages\pipenv\vendor\click\core.py", line 1434, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python312\Lib\site-packages\pipenv\vendor\click\core.py", line 783, in invoke
+    return __callback(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python312\Lib\site-packages\pipenv\vendor\click\decorators.py", line 92, in new_func
+    return ctx.invoke(f, obj, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python312\Lib\site-packages\pipenv\vendor\click\core.py", line 783, in invoke
+    return __callback(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python312\Lib\site-packages\pipenv\cli\command.py", line 762, in requirements
+    generate_requirements(
+  File "C:\Python312\Lib\site-packages\pipenv\routines\requirements.py", line 18, in generate_requirements
+    lockfile = project.load_lockfile(expand_env_vars=False)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python312\Lib\site-packages\pipenv\project.py", line 1316, in load_lockfile
+    with open(self.lockfile_location, encoding="utf-8") as lock:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'D:\\GitHub\\ramprasathmk\\Automatic-Attendance-System-for-Face-Recognition\\Pipfile.lock'
+D:\GitHub\ramprasathmk\Automatic-Attendance-System-for-Face-Recognition git:[master]
+pipenv lock
+Creating a virtualenv for this project
+Pipfile: D:\GitHub\ramprasathmk\Automatic-Attendance-System-for-Face-Recognition\Pipfile
+Using C:/Users/littl/AppData/Local/Programs/Python/Python310/python.exe3.10.11 to create virtualenv...
+[ ===] Creating virtual environment...created virtual environment CPython3.10.11.final.0-64 in 6730ms
+  creator CPython3Windows(dest=C:\Users\littl\.virtualenvs\Automatic-Attendance-System-for-Face-Recog-D8cCKV2z, clear=False, no_vcs_ignore=False, global=False)
+  seeder FromAppData(download=False, pip=bundle, setuptools=bundle, wheel=bundle, via=copy, app_data_dir=C:\Users\littl\AppData\Local\pypa\virtualenv)
+    added seed packages: pip==24.2, setuptools==74.0.0, wheel==0.44.0
+  activators BashActivator,BatchActivator,FishActivator,NushellActivator,PowerShellActivator,PythonActivator
+
+Successfully created virtual environment!
+Virtualenv location: C:\Users\littl\.virtualenvs\Automatic-Attendance-System-for-Face-Recog-D8cCKV2z
+requirements.txt found in D:\GitHub\ramprasathmk\Automatic-Attendance-System-for-Face-Recognition instead of Pipfile! Converting...
+Failed...
+Warning: Your Pipfile now contains pinned versions, if your requirements.txt did.
+We recommend updating your Pipfile to specify the "*" version, instead.
+Locking [packages] dependencies...
+Locking [dev-packages] dependencies...
+Updated Pipfile.lock (fedbd2ab7afd84cf16f128af0619749267b62277b4cb6989ef16d4bef6e4eef2)!
+D:\GitHub\ramprasathmk\Automatic-Attendance-System-for-Face-Recognition git:[master]
+pipenv requirements
+-i https://pypi.org/simple
+D:\GitHub\ramprasathmk\Automatic-Attendance-System-for-Face-Recognition git:[master]
+pipenv requirements
+-i https://pypi.org/simple
+D:\GitHub\ramprasathmk\Automatic-Attendance-System-for-Face-Recognition git:[master]
+pipenv requirements -i
+Usage: pipenv requirements [OPTIONS]
+Try 'pipenv requirements -h' for help.
+
+Error: No such option: -i
+D:\GitHub\ramprasathmk\Automatic-Attendance-System-for-Face-Recognition git:[master]
+pipenv requirements -h
+Usage: pipenv requirements [OPTIONS]
+
+Options:
+  --dev              Also add development requirements.
+  --dev-only         Only add development requirements.
+  --hash             Add package hashes.
+  --exclude-markers  Exclude markers.
+  --categories TEXT  Only add requirement of the specified categories.
+  --from-pipfile     Only include dependencies from Pipfile.
+  -h, --help         Show this message and exit.
+D:\GitHub\ramprasathmk\Automatic-Attendance-System-for-Face-Recognition git:[master]
+pipenv sync
+To activate this project's virtualenv, run pipenv shell.
+Alternatively, run a command inside the virtualenv with pipenv run.
+Installing dependencies from Pipfile.lock (e4eef2)...
+All dependencies are now up-to-date!
+D:\GitHub\ramprasathmk\Automatic-Attendance-System-for-Face-Recognition git:[master]
+pipenv shell
+Launching subshell in virtual environment...
+PowerShell 7.4.5
+PS D:\GitHub\ramprasathmk\Automatic-Attendance-System-for-Face-Recognition> pipenv run
+Usage: pipenv run [OPTIONS] COMMAND [ARGS]...
+Try 'pipenv run -h' for help.
+
+Error: Missing argument 'COMMAND'.
+PS D:\GitHub\ramprasathmk\Automatic-Attendance-System-for-Face-Recognition> pipenv run pip freeze
+PS D:\GitHub\ramprasathmk\Automatic-Attendance-System-for-Face-Recognition>
+
+
+requirements.txt
+-----------------
+numpy==1.26.3
+opencv-python==4.9.0.80
+face-recognition~=1.3.0
+pillow~=10.4.0
+
+
+new requirements.txt
+---------------------
+certifi==2024.8.30
+distlib==0.3.8
+filelock==3.16.1
+numpy==1.26.3
+opencv-python==4.9.0.82
+packaging==24.1
+pillow==10.4.0
+pipenv==2024.1.0
+platformdirs==4.3.6
+virtualenv==20.26.6
+
+
+
+new requirements.txt(1)
+---------------------
+certifi==2024.8.30
+distlib==0.3.8
+filelock==3.16.1
+numpy==1.26.3
+opencv-python==4.10.0.82
+packaging==24.1
+pillow==10.4.0
+pipenv==2024.1.0
+platformdirs==4.3.6
+virtualenv==20.26.6
+
+face-recognition~=1.3.0
+

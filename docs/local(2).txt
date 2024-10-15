@@ -1,0 +1,389 @@
+PowerShell 7.4.5
+(Automatic-Attendance-System-for-Face-Recognition) D:\GitHub\ramprasathmk\Automatic-Attendance-System-for-Face-Recognition git:[master]
+pwd
+
+Path
+----
+D:\GitHub\ramprasathmk\Automatic-Attendance-System-for-Face-Recognition
+
+(Automatic-Attendance-System-for-Face-Recognition) D:\GitHub\ramprasathmk\Automatic-Attendance-System-for-Face-Recognition git:[master]
+pip -V
+pip 23.2.1 from D:\projects\Automatic-Attendance-System-for-Face-Recognition\lib\site-packages\pip (python 3.10)
+(Automatic-Attendance-System-for-Face-Recognition) D:\GitHub\ramprasathmk\Automatic-Attendance-System-for-Face-Recognition git:[master]
+pip install pipenv
+Collecting pipenv
+  Obtaining dependency information for pipenv from https://files.pythonhosted.org/packages/fd/45/9441892f5e7380ec5db371bfbd1f2f1659fed9bf2ea122f1fc20798afda7/pipenv-2024.1.0-py3-none-any.whl.metadata
+  Downloading pipenv-2024.1.0-py3-none-any.whl.metadata (19 kB)
+Collecting certifi (from pipenv)
+  Obtaining dependency information for certifi from https://files.pythonhosted.org/packages/12/90/3c9ff0512038035f59d279fddeb79f5f1eccd8859f06d6163c58798b9487/certifi-2024.8.30-py3-none-any.whl.metadata
+  Downloading certifi-2024.8.30-py3-none-any.whl.metadata (2.2 kB)
+Collecting packaging>=22 (from pipenv)
+  Obtaining dependency information for packaging>=22 from https://files.pythonhosted.org/packages/08/aa/cc0199a5f0ad350994d660967a8efb233fe0416e4639146c089643407ce6/packaging-24.1-py3-none-any.whl.metadata
+  Downloading packaging-24.1-py3-none-any.whl.metadata (3.2 kB)
+Requirement already satisfied: setuptools>=67 in d:\projects\automatic-attendance-system-for-face-recognition\lib\site-packages (from pipenv) (68.2.0)
+Collecting virtualenv>=20.24.2 (from pipenv)
+  Obtaining dependency information for virtualenv>=20.24.2 from https://files.pythonhosted.org/packages/59/90/57b8ac0c8a231545adc7698c64c5a36fa7cd8e376c691b9bde877269f2eb/virtualenv-20.26.6-py3-none-any.whl.metadata
+  Downloading virtualenv-20.26.6-py3-none-any.whl.metadata (4.5 kB)
+Collecting distlib<1,>=0.3.7 (from virtualenv>=20.24.2->pipenv)
+  Obtaining dependency information for distlib<1,>=0.3.7 from https://files.pythonhosted.org/packages/8e/41/9307e4f5f9976bc8b7fea0b66367734e8faf3ec84bc0d412d8cfabbb66cd/distlib-0.3.8-py2.py3-none-any.whl.metadata
+  Downloading distlib-0.3.8-py2.py3-none-any.whl.metadata (5.1 kB)
+Collecting filelock<4,>=3.12.2 (from virtualenv>=20.24.2->pipenv)
+  Obtaining dependency information for filelock<4,>=3.12.2 from https://files.pythonhosted.org/packages/b9/f8/feced7779d755758a52d1f6635d990b8d98dc0a29fa568bbe0625f18fdf3/filelock-3.16.1-py3-none-any.whl.metadata
+  Downloading filelock-3.16.1-py3-none-any.whl.metadata (2.9 kB)
+Collecting platformdirs<5,>=3.9.1 (from virtualenv>=20.24.2->pipenv)
+  Obtaining dependency information for platformdirs<5,>=3.9.1 from https://files.pythonhosted.org/packages/3c/a6/bc1012356d8ece4d66dd75c4b9fc6c1f6650ddd5991e421177d9f8f671be/platformdirs-4.3.6-py3-none-any.whl.metadata
+  Downloading platformdirs-4.3.6-py3-none-any.whl.metadata (11 kB)
+Downloading pipenv-2024.1.0-py3-none-any.whl (3.0 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.0/3.0 MB 6.1 MB/s eta 0:00:00
+Using cached packaging-24.1-py3-none-any.whl (53 kB)
+Downloading virtualenv-20.26.6-py3-none-any.whl (6.0 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 6.0/6.0 MB 14.2 MB/s eta 0:00:00
+Downloading certifi-2024.8.30-py3-none-any.whl (167 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 167.3/167.3 kB 9.8 MB/s eta 0:00:00
+Using cached distlib-0.3.8-py2.py3-none-any.whl (468 kB)
+Downloading filelock-3.16.1-py3-none-any.whl (16 kB)
+Downloading platformdirs-4.3.6-py3-none-any.whl (18 kB)
+Installing collected packages: distlib, platformdirs, packaging, filelock, certifi, virtualenv, pipenv
+Successfully installed certifi-2024.8.30 distlib-0.3.8 filelock-3.16.1 packaging-24.1 pipenv-2024.1.0 platformdirs-4.3.6 virtualenv-20.26.6
+
+[notice] A new release of pip is available: 23.2.1 -> 24.2
+[notice] To update, run: python.exe -m pip install --upgrade pip
+(Automatic-Attendance-System-for-Face-Recognition) D:\GitHub\ramprasathmk\Automatic-Attendance-System-for-Face-Recognition git:[master]
+pipenv sync
+Courtesy Notice:
+Pipenv found itself running within a virtual environment,  so it will automatically use that environment, instead of  creating its own for any project. You can
+set
+PIPENV_IGNORE_VIRTUALENVS=1 to force pipenv to ignore that environment and create  its own instead.
+You can set PIPENV_VERBOSITY=-1 to suppress this warning.
+To activate this project's virtualenv, run pipenv shell.
+Alternatively, run a command inside the virtualenv with pipenv run.
+Installing dependencies from Pipfile.lock (8a2b0b)...
+: Collecting click==8.1.7 (from -r c:\users\littl\appdata\local\temp\pipenv-umzhhhkr-requirements\pipenv-vrmu797q-hashed-reqs.txt (line 1))
+:   Using cached click-8.1.7-py3-none-any.whl (97 kB)
+: Collecting colorama==0.4.6 (from -r c:\users\littl\appdata\local\temp\pipenv-umzhhhkr-requirements\pipenv-vrmu797q-hashed-reqs.txt (line 2))
+:   Using cached colorama-0.4.6-py2.py3-none-any.whl (25 kB)
+: Collecting dlib==19.24.6 (from -r c:\users\littl\appdata\local\temp\pipenv-umzhhhkr-requirements\pipenv-vrmu797q-hashed-reqs.txt (line 3))
+:   Using cached dlib-19.24.6.tar.gz (3.4 MB)
+:   Preparing metadata (setup.py): started
+:   Preparing metadata (setup.py): finished with status 'done'
+: Collecting face-recognition==1.3.0 (from -r c:\users\littl\appdata\local\temp\pipenv-umzhhhkr-requirements\pipenv-vrmu797q-hashed-reqs.txt (line 4))
+:   Using cached face_recognition-1.3.0-py2.py3-none-any.whl (15 kB)
+: Collecting face-recognition-models==0.3.0 (from -r c:\users\littl\appdata\local\temp\pipenv-umzhhhkr-requirements\pipenv-vrmu797q-hashed-reqs.txt (line 5))
+:   Using cached face_recognition_models-0.3.0-py2.py3-none-any.whl
+: Building wheels for collected packages: dlib
+:   Building wheel for dlib (setup.py): started
+:   Building wheel for dlib (setup.py): finished with status 'error'
+:   Running setup.py clean for dlib
+: Failed to build dlib
+: error: subprocess-exited-with-error
+:
+:   × python setup.py bdist_wheel did not run successfully.
+:   │ exit code: 1
+:   ╰─> [67 lines of output]
+:       running bdist_wheel
+:       running build
+:       running build_ext
+:       C:\Users\littl\AppData\Local\Temp\pip-install-j6od8ypt\dlib_ad802a025d8d4480bec56a640854c442\setup.py:163: DeprecationWarning: distutils Version classes
+are deprecated. Use packaging.version instead.
+:         if LooseVersion(cmake_version) < '3.1.0':
+:       Building extension for Python 3.10.11 (tags/v3.10.11:7d4cc5a, Apr  5 2023, 00:38:17) [MSC v.1929 64 bit (AMD64)]
+:       Invoking CMake setup: 'cmake C:\Users\littl\AppData\Local\Temp\pip-install-j6od8ypt\dlib_ad802a025d8d4480bec56a640854c442\tools\python
+-DCMAKE_LIBRARY_OUTPUT_DIRECTORY=C:\Users\littl\AppData\Local\Temp\pip-install-j6od8ypt\dlib_ad802a025d8d4480bec56a640854c442\build\lib.win-amd64-cpython-310
+-DPYTHON_EXECUTABLE=D:\projects\Automatic-Attendance-System-for-Face-Recognition\Scripts\python.exe -DDLIB_USE_FFMPEG=OFF
+-DCMAKE_LIBRARY_OUTPUT_DIRECTORY_RELEASE=C:\Users\littl\AppData\Local\Temp\pip-install-j6od8ypt\dlib_ad802a025d8d4480bec56a640854c442\build\lib.win-amd64-cpython
+-310 -A x64'
+:       -- Building for: NMake Makefiles
+:       CMake Error at CMakeLists.txt:5 (message):
+:
+:
+:
+:         !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+:
+:
+:         You must use Visual Studio to build a python extension on windows.  If you
+:         are getting this error it means you have not installed Visual C++.  Note
+:         that there are many flavors of Visual Studio, like Visual Studio for C#
+:         development.  You need to install Visual Studio for C++.
+:
+:
+:         !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+:
+:
+:
+:
+:       -- Configuring incomplete, errors occurred!
+:       Traceback (most recent call last):
+:         File "<string>", line 2, in <module>
+:         File "<pip-setuptools-caller>", line 34, in <module>
+:         File "C:\Users\littl\AppData\Local\Temp\pip-install-j6od8ypt\dlib_ad802a025d8d4480bec56a640854c442\setup.py", line 243, in <module>
+:           setup(
+:         File "D:\projects\Automatic-Attendance-System-for-Face-Recognition\lib\site-packages\setuptools\__init__.py", line 103, in setup
+:           return distutils.core.setup(**attrs)
+:         File "D:\projects\Automatic-Attendance-System-for-Face-Recognition\lib\site-packages\setuptools\_distutils\core.py", line 185, in setup
+:           return run_commands(dist)
+:         File "D:\projects\Automatic-Attendance-System-for-Face-Recognition\lib\site-packages\setuptools\_distutils\core.py", line 201, in run_commands
+:           dist.run_commands()
+:         File "D:\projects\Automatic-Attendance-System-for-Face-Recognition\lib\site-packages\setuptools\_distutils\dist.py", line 969, in run_commands
+:           self.run_command(cmd)
+:         File "D:\projects\Automatic-Attendance-System-for-Face-Recognition\lib\site-packages\setuptools\dist.py", line 1001, in run_command
+:           super().run_command(command)
+:         File "D:\projects\Automatic-Attendance-System-for-Face-Recognition\lib\site-packages\setuptools\_distutils\dist.py", line 988, in run_command
+:           cmd_obj.run()
+:         File "D:\projects\Automatic-Attendance-System-for-Face-Recognition\lib\site-packages\wheel\bdist_wheel.py", line 364, in run
+:           self.run_command("build")
+:         File "D:\projects\Automatic-Attendance-System-for-Face-Recognition\lib\site-packages\setuptools\_distutils\cmd.py", line 318, in run_command
+:           self.distribution.run_command(command)
+:         File "D:\projects\Automatic-Attendance-System-for-Face-Recognition\lib\site-packages\setuptools\dist.py", line 1001, in run_command
+:           super().run_command(command)
+:         File "D:\projects\Automatic-Attendance-System-for-Face-Recognition\lib\site-packages\setuptools\_distutils\dist.py", line 988, in run_command
+:           cmd_obj.run()
+:         File "D:\projects\Automatic-Attendance-System-for-Face-Recognition\lib\site-packages\setuptools\_distutils\command\build.py", line 131, in run
+:           self.run_command(cmd_name)
+:         File "D:\projects\Automatic-Attendance-System-for-Face-Recognition\lib\site-packages\setuptools\_distutils\cmd.py", line 318, in run_command
+:           self.distribution.run_command(command)
+:         File "D:\projects\Automatic-Attendance-System-for-Face-Recognition\lib\site-packages\setuptools\dist.py", line 1001, in run_command
+:           super().run_command(command)
+:         File "D:\projects\Automatic-Attendance-System-for-Face-Recognition\lib\site-packages\setuptools\_distutils\dist.py", line 988, in run_command
+:           cmd_obj.run()
+:         File "C:\Users\littl\AppData\Local\Temp\pip-install-j6od8ypt\dlib_ad802a025d8d4480bec56a640854c442\setup.py", line 168, in run
+:           self.build_extension(ext)
+:         File "C:\Users\littl\AppData\Local\Temp\pip-install-j6od8ypt\dlib_ad802a025d8d4480bec56a640854c442\setup.py", line 206, in build_extension
+:           subprocess.check_call(cmake_setup, cwd=build_folder)
+:         File "C:\Users\littl\AppData\Local\Programs\Python\Python310\lib\subprocess.py", line 369, in check_call
+:           raise CalledProcessError(retcode, cmd)
+:       subprocess.CalledProcessError: Command '['cmake',
+'C:\\Users\\littl\\AppData\\Local\\Temp\\pip-install-j6od8ypt\\dlib_ad802a025d8d4480bec56a640854c442\\tools\\python',
+'-DCMAKE_LIBRARY_OUTPUT_DIRECTORY=C:\\Users\\littl\\AppData\\Local\\Temp\\pip-install-j6od8ypt\\dlib_ad802a025d8d4480bec56a640854c442\\build\\lib.win-amd64-cpyth
+on-310', '-DPYTHON_EXECUTABLE=D:\\projects\\Automatic-Attendance-System-for-Face-Recognition\\Scripts\\python.exe', '-DDLIB_USE_FFMPEG=OFF',
+'-DCMAKE_LIBRARY_OUTPUT_DIRECTORY_RELEASE=C:\\Users\\littl\\AppData\\Local\\Temp\\pip-install-j6od8ypt\\dlib_ad802a025d8d4480bec56a640854c442\\build\\lib.win-amd
+64-cpython-310', '-A', 'x64']' returned non-zero exit status 1.
+:
+:
+:   note: This error originates from a subprocess, and is likely not a problem with pip.
+:   ERROR: Failed building wheel for dlib
+: ERROR: ERROR: Failed to build installable wheels for some pyproject.toml based projects (dlib)
+ERROR: Couldn't install package: [1m{}[0m
+ [33mPackage installation failed...[0m
+(Automatic-Attendance-System-for-Face-Recognition) D:\GitHub\ramprasathmk\Automatic-Attendance-System-for-Face-Recognition git:[master]
+git clone "https://github.com/RvTechiNNovate/face_recog_dlib_file.git"
+Cloning into 'face_recog_dlib_file'...
+remote: Enumerating objects: 15, done.
+remote: Counting objects: 100% (15/15), done.
+remote: Compressing objects: 100% (12/12), done.
+remote: Total 15 (delta 1), reused 12 (delta 0), pack-reused 0 (from 0)
+Receiving objects: 100% (15/15), 9.61 MiB | 9.66 MiB/s, done.
+Resolving deltas: 100% (1/1), done.
+(Automatic-Attendance-System-for-Face-Recognition) D:\GitHub\ramprasathmk\Automatic-Attendance-System-for-Face-Recognition git:[master]
+pip list
+Package       Version
+------------- ---------
+certifi       2024.8.30
+distlib       0.3.8
+filelock      3.16.1
+numpy         1.26.3
+opencv-python 4.9.0.80
+packaging     24.1
+pillow        10.4.0
+pip           23.2.1
+pipenv        2024.1.0
+platformdirs  4.3.6
+setuptools    68.2.0
+virtualenv    20.26.6
+wheel         0.41.2
+
+[notice] A new release of pip is available: 23.2.1 -> 24.2
+[notice] To update, run: python.exe -m pip install --upgrade pip
+(Automatic-Attendance-System-for-Face-Recognition) D:\GitHub\ramprasathmk\Automatic-Attendance-System-for-Face-Recognition git:[master]
+pip freeze > requirements.txt
+(Automatic-Attendance-System-for-Face-Recognition) D:\GitHub\ramprasathmk\Automatic-Attendance-System-for-Face-Recognition git:[master]
+pip list
+Package       Version
+------------- ---------
+certifi       2024.8.30
+distlib       0.3.8
+filelock      3.16.1
+numpy         1.26.3
+opencv-python 4.9.0.80
+packaging     24.1
+pillow        10.4.0
+pip           23.2.1
+pipenv        2024.1.0
+platformdirs  4.3.6
+setuptools    68.2.0
+virtualenv    20.26.6
+wheel         0.41.2
+
+[notice] A new release of pip is available: 23.2.1 -> 24.2
+[notice] To update, run: python.exe -m pip install --upgrade pip
+(Automatic-Attendance-System-for-Face-Recognition) D:\GitHub\ramprasathmk\Automatic-Attendance-System-for-Face-Recognition git:[master]
+pipenv sync
+Courtesy Notice:
+Pipenv found itself running within a virtual environment,  so it will automatically use that environment, instead of  creating its own for any project. You can
+set
+PIPENV_IGNORE_VIRTUALENVS=1 to force pipenv to ignore that environment and create  its own instead.
+You can set PIPENV_VERBOSITY=-1 to suppress this warning.
+To activate this project's virtualenv, run pipenv shell.
+Alternatively, run a command inside the virtualenv with pipenv run.
+Installing dependencies from Pipfile.lock (8a2b0b)...
+: Collecting click==8.1.7 (from -r c:\users\littl\appdata\local\temp\pipenv-7zg1vsda-requirements\pipenv-gxirt8sm-hashed-reqs.txt (line 1))
+:   Using cached click-8.1.7-py3-none-any.whl (97 kB)
+: Collecting colorama==0.4.6 (from -r c:\users\littl\appdata\local\temp\pipenv-7zg1vsda-requirements\pipenv-gxirt8sm-hashed-reqs.txt (line 2))
+:   Using cached colorama-0.4.6-py2.py3-none-any.whl (25 kB)
+: Collecting dlib==19.24.6 (from -r c:\users\littl\appdata\local\temp\pipenv-7zg1vsda-requirements\pipenv-gxirt8sm-hashed-reqs.txt (line 3))
+:   Using cached dlib-19.24.6.tar.gz (3.4 MB)
+:   Preparing metadata (setup.py): started
+:   Preparing metadata (setup.py): finished with status 'done'
+: Collecting face-recognition==1.3.0 (from -r c:\users\littl\appdata\local\temp\pipenv-7zg1vsda-requirements\pipenv-gxirt8sm-hashed-reqs.txt (line 4))
+:   Using cached face_recognition-1.3.0-py2.py3-none-any.whl (15 kB)
+: Collecting face-recognition-models==0.3.0 (from -r c:\users\littl\appdata\local\temp\pipenv-7zg1vsda-requirements\pipenv-gxirt8sm-hashed-reqs.txt (line 5))
+:   Using cached face_recognition_models-0.3.0-py2.py3-none-any.whl
+: Building wheels for collected packages: dlib
+:   Building wheel for dlib (setup.py): started
+:   Building wheel for dlib (setup.py): finished with status 'error'
+:   Running setup.py clean for dlib
+: Failed to build dlib
+: error: subprocess-exited-with-error
+:
+:   × python setup.py bdist_wheel did not run successfully.
+:   │ exit code: 1
+:   ╰─> [67 lines of output]
+:       running bdist_wheel
+:       running build
+:       running build_ext
+:       C:\Users\littl\AppData\Local\Temp\pip-install-499yuato\dlib_a0d3b6e502da41479c6b7765d4b6ee12\setup.py:163: DeprecationWarning: distutils Version classes
+are deprecated. Use packaging.version instead.
+:         if LooseVersion(cmake_version) < '3.1.0':
+:       Building extension for Python 3.10.11 (tags/v3.10.11:7d4cc5a, Apr  5 2023, 00:38:17) [MSC v.1929 64 bit (AMD64)]
+:       Invoking CMake setup: 'cmake C:\Users\littl\AppData\Local\Temp\pip-install-499yuato\dlib_a0d3b6e502da41479c6b7765d4b6ee12\tools\python
+-DCMAKE_LIBRARY_OUTPUT_DIRECTORY=C:\Users\littl\AppData\Local\Temp\pip-install-499yuato\dlib_a0d3b6e502da41479c6b7765d4b6ee12\build\lib.win-amd64-cpython-310
+-DPYTHON_EXECUTABLE=D:\projects\Automatic-Attendance-System-for-Face-Recognition\Scripts\python.exe -DDLIB_USE_FFMPEG=OFF
+-DCMAKE_LIBRARY_OUTPUT_DIRECTORY_RELEASE=C:\Users\littl\AppData\Local\Temp\pip-install-499yuato\dlib_a0d3b6e502da41479c6b7765d4b6ee12\build\lib.win-amd64-cpython
+-310 -A x64'
+:       -- Building for: NMake Makefiles
+:       CMake Error at CMakeLists.txt:5 (message):
+:
+:
+:
+:         !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+:
+:
+:         You must use Visual Studio to build a python extension on windows.  If you
+:         are getting this error it means you have not installed Visual C++.  Note
+:         that there are many flavors of Visual Studio, like Visual Studio for C#
+:         development.  You need to install Visual Studio for C++.
+:
+:
+:         !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+:
+:
+:
+:
+:       -- Configuring incomplete, errors occurred!
+:       Traceback (most recent call last):
+:         File "<string>", line 2, in <module>
+:         File "<pip-setuptools-caller>", line 34, in <module>
+:         File "C:\Users\littl\AppData\Local\Temp\pip-install-499yuato\dlib_a0d3b6e502da41479c6b7765d4b6ee12\setup.py", line 243, in <module>
+:           setup(
+:         File "D:\projects\Automatic-Attendance-System-for-Face-Recognition\lib\site-packages\setuptools\__init__.py", line 103, in setup
+:           return distutils.core.setup(**attrs)
+:         File "D:\projects\Automatic-Attendance-System-for-Face-Recognition\lib\site-packages\setuptools\_distutils\core.py", line 185, in setup
+:           return run_commands(dist)
+:         File "D:\projects\Automatic-Attendance-System-for-Face-Recognition\lib\site-packages\setuptools\_distutils\core.py", line 201, in run_commands
+:           dist.run_commands()
+:         File "D:\projects\Automatic-Attendance-System-for-Face-Recognition\lib\site-packages\setuptools\_distutils\dist.py", line 969, in run_commands
+:           self.run_command(cmd)
+:         File "D:\projects\Automatic-Attendance-System-for-Face-Recognition\lib\site-packages\setuptools\dist.py", line 1001, in run_command
+:           super().run_command(command)
+:         File "D:\projects\Automatic-Attendance-System-for-Face-Recognition\lib\site-packages\setuptools\_distutils\dist.py", line 988, in run_command
+:           cmd_obj.run()
+:         File "D:\projects\Automatic-Attendance-System-for-Face-Recognition\lib\site-packages\wheel\bdist_wheel.py", line 364, in run
+:           self.run_command("build")
+:         File "D:\projects\Automatic-Attendance-System-for-Face-Recognition\lib\site-packages\setuptools\_distutils\cmd.py", line 318, in run_command
+:           self.distribution.run_command(command)
+:         File "D:\projects\Automatic-Attendance-System-for-Face-Recognition\lib\site-packages\setuptools\dist.py", line 1001, in run_command
+:           super().run_command(command)
+:         File "D:\projects\Automatic-Attendance-System-for-Face-Recognition\lib\site-packages\setuptools\_distutils\dist.py", line 988, in run_command
+:           cmd_obj.run()
+:         File "D:\projects\Automatic-Attendance-System-for-Face-Recognition\lib\site-packages\setuptools\_distutils\command\build.py", line 131, in run
+:           self.run_command(cmd_name)
+:         File "D:\projects\Automatic-Attendance-System-for-Face-Recognition\lib\site-packages\setuptools\_distutils\cmd.py", line 318, in run_command
+:           self.distribution.run_command(command)
+:         File "D:\projects\Automatic-Attendance-System-for-Face-Recognition\lib\site-packages\setuptools\dist.py", line 1001, in run_command
+:           super().run_command(command)
+:         File "D:\projects\Automatic-Attendance-System-for-Face-Recognition\lib\site-packages\setuptools\_distutils\dist.py", line 988, in run_command
+:           cmd_obj.run()
+:         File "C:\Users\littl\AppData\Local\Temp\pip-install-499yuato\dlib_a0d3b6e502da41479c6b7765d4b6ee12\setup.py", line 168, in run
+:           self.build_extension(ext)
+:         File "C:\Users\littl\AppData\Local\Temp\pip-install-499yuato\dlib_a0d3b6e502da41479c6b7765d4b6ee12\setup.py", line 206, in build_extension
+:           subprocess.check_call(cmake_setup, cwd=build_folder)
+:         File "C:\Users\littl\AppData\Local\Programs\Python\Python310\lib\subprocess.py", line 369, in check_call
+:           raise CalledProcessError(retcode, cmd)
+:       subprocess.CalledProcessError: Command '['cmake',
+'C:\\Users\\littl\\AppData\\Local\\Temp\\pip-install-499yuato\\dlib_a0d3b6e502da41479c6b7765d4b6ee12\\tools\\python',
+'-DCMAKE_LIBRARY_OUTPUT_DIRECTORY=C:\\Users\\littl\\AppData\\Local\\Temp\\pip-install-499yuato\\dlib_a0d3b6e502da41479c6b7765d4b6ee12\\build\\lib.win-amd64-cpyth
+on-310', '-DPYTHON_EXECUTABLE=D:\\projects\\Automatic-Attendance-System-for-Face-Recognition\\Scripts\\python.exe', '-DDLIB_USE_FFMPEG=OFF',
+'-DCMAKE_LIBRARY_OUTPUT_DIRECTORY_RELEASE=C:\\Users\\littl\\AppData\\Local\\Temp\\pip-install-499yuato\\dlib_a0d3b6e502da41479c6b7765d4b6ee12\\build\\lib.win-amd
+64-cpython-310', '-A', 'x64']' returned non-zero exit status 1.
+:
+:
+:   note: This error originates from a subprocess, and is likely not a problem with pip.
+:   ERROR: Failed building wheel for dlib
+: ERROR: ERROR: Failed to build installable wheels for some pyproject.toml based projects (dlib)
+ERROR: Couldn't install package: [1m{}[0m
+ [33mPackage installation failed...[0m
+(Automatic-Attendance-System-for-Face-Recognition) D:\GitHub\ramprasathmk\Automatic-Attendance-System-for-Face-Recognition git:[master]
+pipenv shell
+Courtesy Notice:
+Pipenv found itself running within a virtual environment,  so it will automatically use that environment, instead of  creating its own for any project. You can
+set
+PIPENV_IGNORE_VIRTUALENVS=1 to force pipenv to ignore that environment and create  its own instead.
+You can set PIPENV_VERBOSITY=-1 to suppress this warning.
+Launching subshell in virtual environment...
+PowerShell 7.4.5
+PS D:\GitHub\ramprasathmk\Automatic-Attendance-System-for-Face-Recognition> cat Pipfile
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+numpy = "==1.26.3"
+opencv-python = "==4.9.0.80"
+face-recognition = "*"
+pillow = "~=10.4.0"
+
+[dev-packages]
+
+[requires]
+python_version = "3.10"
+PS D:\GitHub\ramprasathmk\Automatic-Attendance-System-for-Face-Recognition> pipenv lock -r
+Usage: pipenv lock [OPTIONS]
+Try 'pipenv lock -h' for help.
+
+Error: No such option: -r
+PS D:\GitHub\ramprasathmk\Automatic-Attendance-System-for-Face-Recognition> pipenv lock --requirements
+Usage: pipenv lock [OPTIONS]
+Try 'pipenv lock -h' for help.
+
+Error: No such option: --requirements Did you mean --quiet?
+PS D:\GitHub\ramprasathmk\Automatic-Attendance-System-for-Face-Recognition> pipenv lock --help
+Usage: pipenv lock [OPTIONS]
+
+  Generates Pipfile.lock.
+
+Options:
+  --categories TEXT
+  --dev-only             Emit development dependencies *only* (overrides
+                         --dev)
+  -d, --dev              Generate both develop and default requirements  [env
+                         var: PIPENV_DEV]
+  --extra-pip-args TEXT
+  --pre                  Allow pre-releases.
+  --python TEXT          Specify which version of Python virtualenv should
+                         use.
+  --clear                Clears caches (pipenv, pip).  [env var: PIPENV_CLEAR]
+  -q, --quiet            Quiet mode.
+  -v, --verbose          Verbose mode.
+  --pypi-mirror TEXT     Specify a PyPI mirror.
+  -h, --help             Show this message and exit.
+PS D:\GitHub\ramprasathmk\Automatic-Attendance-System-for-Face-Recognition>
