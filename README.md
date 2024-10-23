@@ -56,16 +56,16 @@
 [pyc]: https://www.jetbrains.com/pycharm/download/
 
 
-## For Installation Process:
+## For Installation Process
 - Refer the [Installation.md][ins] file.
 
 
-## Note:
+## Note
 - Use the [Python 3.10][pyn] version.
 - **Recommended Python Series** for the Execution.
 
 
-## Tools:
+## Tools
 
 | Tools   | Version       | Check |
 |---------|---------------|-------|
@@ -75,7 +75,7 @@
 | PyCharm | [latest][pyc] | [✔]   |
 
 
-## Show your support:
+## Show your support
 
 Give a ⭐ if you like this repository!
 
